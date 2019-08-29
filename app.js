@@ -86,12 +86,40 @@ document.addEventListener("keydown", (event) => {
 
 
   
+  boom.addEventListener("click", () => {
+    makeDrum('boom', boom)
+  })
+
+  clap.addEventListener("click", () => {
+    makeDrum('clap', clap)
+  })
+
+  hihat.addEventListener("click", () => {
+    makeDrum('hihat', hihat)
+  })
 
 
+  openhat.addEventListener("click", () => {
+    makeDrum('openhat', openhat)
+  })
+
+  ride.addEventListener("click", () => {
+    makeDrum('ride', ride)
+  })
+
+  snare.addEventListener("click", () => {
+    makeDrum('snare', snare)
+  })
+
+  tink.addEventListener("click", () => {
+    makeDrum('tink', tink)
+  })
+
+  tom.addEventListener("click", () => {
+    makeDrum('tom', tom)
+  })
 
 
-
-
-
-
-
+  kick.addEventListener("click", () => {
+    makeDrum('kick', kick)
+  })
