@@ -10,7 +10,6 @@ const tom = document.getElementById('tom')
 
 // const body = document.querySelector('body')
 
-
 // Play drum by keyboard press
 
 const sound = new Audio();  
@@ -19,24 +18,19 @@ const sound = new Audio();
 // every drum has a sound, a style
 // also may wish to change the overall drum kit
 
-// class noise {
-//     constructor(drumType){
-//         this.drumType = drumType
-//     }
 
-// }
 
-const makeDrum = (drum) =>{
+const makeDrum = (drum, theElementObject) =>{
     console.log(`key pressed --> ${drum}`)
 
-    boom.classList.add("bang")
+    theElementObject.classList.add("bang")
     console.log(`boom.classList.add("bang")`)
 
     sound.src = `./sounds/${drum}.wav`
     sound.play()
 
     setTimeout(()=>{
-        boom.classList.remove("bang")
+        theElementObject.classList.remove("bang")
         console.log(`boom.classList.remove("bang")`)
     },100)
    
@@ -50,45 +44,48 @@ document.addEventListener("keydown", (event) => {
 
         switch(event.key) {
             case "q":
-                    makeDrum('boom')
+                    makeDrum('boom', boom)
             break;
 
             case "w":
-                    makeDrum('clap')
+                    makeDrum('clap', clap)
             break;
 
             case "e":
-                    makeDrum('clap')
+                    makeDrum('hihat', hihat)
             break;
 
             case "r":
-                    makeDrum('kick')
+                    makeDrum('kick', kick)
             break;
 
             case "t":
-                    makeDrum('openhat')
+                    makeDrum('openhat', openhat)
             break;
 
             case "y":
-                    makeDrum('ride')
+                    makeDrum('ride', ride)
             break;
 
             case "u":
-                    makeDrum('snare')
+                    makeDrum('snare', snare)
             break;
 
             case "i":
-                    makeDrum('tink')
+                    makeDrum('tink', tink)
             break;
 
             case "o":
-                    makeDrum('tom')
+                    makeDrum('tom', tom)
             break;
 
             default:
                 console.log(`non-drum key pressed --> ${event.key}`)
         }
   })
+
+
+  
 
 
 
