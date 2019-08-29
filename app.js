@@ -29,14 +29,19 @@ const sound = new Audio();
 const makeDrum = (drum) =>{
     console.log(`key pressed --> ${drum}`)
 
+    boom.classList.add("bang")
+    console.log(`boom.classList.add("bang")`)
+
     sound.src = `./sounds/${drum}.wav`
     sound.play()
-    // `${drum}`.style.backgroundColor = "red"
-    // `${drum}`.style.color = "white"
 
-    boom.classList.toggle("bang")  // TEMP: only for boom at the mo !
-    
+    setTimeout(()=>{
+        boom.classList.remove("bang")
+        console.log(`boom.classList.remove("bang")`)
+    },100)
+   
 }
+
 
 
 
